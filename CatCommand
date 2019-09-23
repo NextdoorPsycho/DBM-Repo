@@ -1,0 +1,20 @@
+{
+    "name": "cat",
+    "permissions": "NONE",
+    "restriction": "1",
+    "_id": "VZHnJ",
+    "actions": [{
+            "storage": "0",
+            "varName": "",
+            "name": "Delete Message"
+        },
+        {
+            "behavior": "0",
+            "interpretation": "0",
+            "code": "const Discord = require('discord.js');\nconst { get } = require(\"snekfetch\"); \nget('https://aws.random.cat/meow')\n.then(res => {\nconsole.log(res.body.file)\nconst embed = new Discord.RichEmbed()\n.setImage(res.body.file)\nreturn msg.channel.send({embed});\n});",
+            "storage": "0",
+            "varName": "",
+            "name": "Run Script"
+        }
+    ]
+}
